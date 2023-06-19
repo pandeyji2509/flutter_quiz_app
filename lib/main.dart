@@ -14,22 +14,21 @@ class MyApp extends StatefulWidget {
     return _MyAppState();
   }
 }
-
 class _MyAppState extends State<MyApp> {
   var _questionIndex = 0;
   var totalScore = 0;
   static const List<Map<String, dynamic>> _questions = [
     {
       "question":
-          "Who developed the Flutter Framework and continues to maintain it today?",
-      "answers": ["FaceBook", "Microsoft", "Google", "Oracle", "Apple"],
-      "correctAns": "Google",
+          "Which of the following is a way to handle data in React.js ?",
+      "answers": ["State & Props", "Services & Components", "State & Services", "State & Component"],
+      "correctAns": "State & Props",
     },
     {
       "question":
-          "Which programming language is used to build Flutter applications?",
-      "answers": ["Kotlin", "Dart", "Java", "Go", "Python"],
-      "correctAns": "Dart",
+          "Which of the following is true regarding Babel ?",
+      "answers": ["SetinitialComponent", "renderComponent", "render", "All of the above"],
+      "correctAns": "renderComponent",
     },
     {
       "question": "How many types of widgets are there in Flutter?",
@@ -38,8 +37,8 @@ class _MyAppState extends State<MyApp> {
     },
     {
       "question":
-          "Which function will return the widgets attached to the screen as a root of the widget tree to be rendered on screen?",
-      "answers": ["main()", "runApp()", "container()", "root()"],
+          "In React.js, how we can pass the data from one component to another in React.js ?",
+      "answers": ["SetState", "Render with arguments", "Props", "	PropTypes"],
       "correctAns": "runApp()",
     },
     {
@@ -69,23 +68,25 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       title: "My app",
       theme: ThemeData(
-        primarySwatch: Colors.purple,
+        primarySwatch: Colors.blue,
       ),
       home: Scaffold(
+        backgroundColor: Color.fromARGB(255, 86, 243, 251),
         appBar: AppBar(
-          title: const Text("My app title"),
+          title: const Text("Ankit Pandey UE215014"),
         ),
         floatingActionButton: FloatingActionButton(
           child: const Text(
             "Reset Quiz",
             textAlign: TextAlign.center,
           ),
+          backgroundColor: Color.fromARGB(255, 36, 193, 236),
           onPressed: () {
             _resetQuiz();
           },
         ),
-        body: Container(
-          margin: const EdgeInsets.all(10),
+      body: Container(
+          margin: const EdgeInsets.fromLTRB(300,50,300,0),
           child: _questionIndex >= _questions.length
               ? Result(totalScore)
               : Quiz(

@@ -20,6 +20,12 @@ class Answer extends StatelessWidget {
         answerQuestion(res);
       },
       child: Text(ans),
+      style:OutlinedButton.styleFrom(
+        primary:Colors.teal,
+        backgroundColor: Colors.white,
+        elevation: 10,
+        minimumSize: Size(5, 70)
+      ),
     );
   }
 }

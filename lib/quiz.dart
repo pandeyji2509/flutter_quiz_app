@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'question.dart';
 import 'answer.dart';
@@ -17,10 +18,13 @@ class Quiz extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      crossAxisAlignment: CrossAxisAlignment.stretch,
-      children: <Widget>[
+      crossAxisAlignment: CrossAxisAlignment.stretch,    
+      mainAxisAlignment: MainAxisAlignment.start,
+      verticalDirection: VerticalDirection.down,
+      children:
+      <Widget>[
         Question(questions[questionIndex]["question"] as String),
-        ...(questions[questionIndex]["answers"] as List<String>).map((ans) {
+        ...(questions[questionIndex]["answers"] as List<String>).map((ans) {   
           return Answer(
             answerQuestion: answerQuestion,
             ans: ans,

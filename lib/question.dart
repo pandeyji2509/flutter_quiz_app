@@ -10,9 +10,16 @@ class Question extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(10),
+      // margin: EdgeInsets.symmetric(vertical: 3.0),
+      padding: const EdgeInsets.all(25),
       width: double.infinity,
-      color: Colors.amber,
+      height: 70,
+      decoration: BoxDecoration(
+            gradient: LinearGradient(colors: [
+          Color.fromARGB(255, 27, 185, 243),
+          Color.fromARGB(255, 40, 130, 160)
+        ])),
+      // color: Color.fromARGB(255, 7, 201, 255),
       child: Text(
         questionText!,
         style: const TextStyle(
@@ -20,6 +27,7 @@ class Question extends StatelessWidget {
           fontSize: 16,
         ),
         textAlign: TextAlign.center,
+        
       ),
     );
   }
